@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё Портфолио</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Иконки Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        /* Кастомные стили */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0;
+            color: white;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .skill-bar {
+            height: 25px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            border-radius: 5px;
+            background-color: #0d6efd;
+            text-align: right;
+            padding-right: 10px;
+            color: white;
+            line-height: 25px;
+        }
+        
+        .portfolio-item {
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .portfolio-item img {
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .testimonial-card {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Моё Портфолио</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Обо мне</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Портфолио</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section id="home" class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">AlexDev</h1>
+            <p class="lead">Веб-разработчик</p>
+            <a href="#portfolio" class="btn btn-primary btn-lg mt-3">Мои работы</a>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Обо мне</h2>
+                    <p>Привет! Я веб-разработчик с более чем 5-летним опытом создания современных и адаптивных веб-сайтов. Специализируюсь на фронтенд-разработке с использованием HTML, CSS, JavaScript и различных фреймворков.</p>
+                    <p>Моя цель - создавать не только визуально привлекательные, но и удобные для пользователя интерфейсы, которые решают бизнес-задачи и улучшают пользовательский опыт.</p>
+                    <p>Я постоянно изучаю новые технологии и подходы, чтобы оставаться в курсе последних тенденций в веб-разработке.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://i.pinimg.com/736x/9c/2d/54/9c2d542fcac314dbbc4d6390eb13b80b.jpg" class="img-fluid rounded" alt="Фото разработчика">
+                    <p><strong>Навыки:</strong></p>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Bootstrap</li>
+                        <li>React</li>
+                        <li>PHP/MySQL</li>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">Мои работы</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="Проект 1">
+                        <div class="p-3">
+                            <h4>Корпоративный сайт</h4>
+                            <p>Веб-сайт для IT-компании с адаптивным дизайном</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="Проект 2">
+                        <div class="p-3">
+                            <h4>Интернет-магазин</h4>
+                            <p>Полностью функциональный интернет-магазин одежды</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="Проект 3">
+                        <div class="p-3">
+                            <h4>Мобильное приложение</h4>
+                            <p>Кроссплатформенное приложение для фитнес-трекинга</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">Свяжитесь со мной</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Ваше имя</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Сообщение</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2025 Моё Портфолио.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
